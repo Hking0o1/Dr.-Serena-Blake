@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Serene Healing Space
+
+A modern, responsive website for Dr. Serena Blake, a licensed clinical psychologist, built with Nextjs and Tailwind CSS.
+
+## Features
+
+- **Home Page**: Welcoming hero section and introduction.
+- **About**: Information about Dr. Serena Blake and her credentials.
+- **Services**: Areas of focus with images and short descriptions.
+- **Fees**: Transparent session pricing and features.
+- **Quotes of the Day**: Inspirational quotes with a calming ocean background.
+- **Testimonials**: Client feedback and experiences.
+- **Contact**: Easy-to-use contact form.
+- **FAQs**: Frequently asked questions section.
+- **Responsive Design**: Looks great on all devices.
+- **Deployed on Vercel**: Fast, global hosting.
+
+## Tech Stack
+
+- **Nextjs** (with functional components)
+- **Tailwind CSS** for styling
+- **Vercel** for deployment
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```sh
+git clone https://github.com/Hking0o1/serene-healing-space.git
+cd serene-healing-space
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Run the development server
 
-## Learn More
+```sh
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Visit [http://localhost:3000](http://localhost:3000) to view the site.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Build for production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npm run build
+```
 
-## Deploy on Vercel
+### 5. Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Push to the `main` branch on GitHub.
+- Vercel will automatically deploy your changes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Customization
+
+- Update content and images in the `src/components` directory.
+- Change theme colors in `tailwind.config.js` or directly in component classes.
