@@ -23,6 +23,9 @@ const Header = () => {
 
   return (
     <>
+      {scrolled && (
+        <div className="h-24 md:h-32 w-full" />
+      )}
       <header
         className={`top-0 left-0 right-0 z-50 duration-500 ease-in-out transition-all ${
           scrolled
@@ -41,7 +44,6 @@ const Header = () => {
                 <span className="text-sm md:text-lg text-medium-text">Clinical Psychologist</span>
               </div>
             </div>
-            {/* You can add a mobile menu button here if needed */}
           </div>
         </div>
       </header>
