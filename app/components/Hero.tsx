@@ -11,7 +11,6 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Full-screen background image */}
       <div 
         className="absolute inset-0 z-0"
         style={{
@@ -22,26 +21,22 @@ const Hero = () => {
         }}
       />
       
-      {/* Content overlay */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto animate-fade-in">
         <div className="space-y-6">
-          {/* Subtitle */}
+         
           <p className="text-lg md:text-xl opacity-90 font-light tracking-wide">
             Professional Counseling Services
           </p>
           
-          {/* Main headline (H1) */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal leading-tight">
             Professional Counseling for
             <span className="block text-therapy-sage">Healing and Growth</span>
           </h1>
           
-          {/* Sub-headline (H2) */}
           <h2 className="text-xl md:text-2xl lg:text-3xl font-light opacity-90 leading-relaxed max-w-3xl mx-auto">
             Begin your journey today towards spiritual growth, deeper relationships, and lasting inner peace.
           </h2>
           
-          {/* Service highlights */}
           <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base opacity-80 mt-8">
             <span className="flex items-center">
               <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
@@ -57,7 +52,6 @@ const Hero = () => {
             </span>
           </div>
           
-          {/* Call-to-action button */}
           <div className="pt-8">
             <Button 
               onClick={scrollToContact}
@@ -70,8 +64,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute m-2 bottom-8 left-1/2 transform -translate-x-1/2 z-10 md:hidden">
         <div className="animate-bounce">
           <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>

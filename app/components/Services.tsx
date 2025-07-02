@@ -28,7 +28,7 @@ const Services = () => {
 
   return (
     <section id="services" className="py-20 bg-fuchsia-200">
-      <div className="container mx-auto px-20 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-dark-text">
             Services & Specialties
@@ -40,26 +40,26 @@ const Services = () => {
           </p>
         </div>
         <hr className="border-b-4 border-black mb-4" />
-        <div className="container mx-auto px-4  mb-4">
+        <div className="mb-4">
           <h2 className="text-4xl md:text-5xl font-serif text-center mb-16 text-gray-800">
             Areas of Focus
           </h2>
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {focusAreas.map((area, idx) => (
               <div
                 key={idx}
                 className="flex flex-col items-center text-center"
               >
-                <div className="w-64 h-64 mb-8 rounded-full overflow-hidden shadow-lg relative">
+                <div className="w-56 h-56 sm:w-64 sm:h-64 mb-8 rounded-full overflow-hidden shadow-lg relative">
                   <Image
                     src={area.image}
                     alt={area.title}
                     fill
                     className="object-cover"
-                    sizes="256px"
+                    sizes="(max-width: 640px) 224px, (max-width: 1024px) 256px, 256px"
                   />
                 </div>
-                <h3 className="text-2xl font-serif mb-4 text-gray-800">
+                <h3 className="text-xl md:text-2xl font-serif mb-4 text-gray-800">
                   {area.title}
                 </h3>
                 <p className="text-base text-gray-700">{area.description}</p>

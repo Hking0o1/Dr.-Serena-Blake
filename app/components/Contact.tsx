@@ -59,21 +59,21 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     toast({
       title: "Message sent successfully!",
       description: "Dr. Blake will get back to you within one business day.",
     });
-    
+
     setIsSubmitting(false);
     // Reset form
     setFormData({
@@ -90,34 +90,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-blue-50">
-      <div className="container mx-auto px-20">
-        <div 
-        className="absolute inset-0 z-0 w-full py-8 bg-url() flex justify-center items-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('https://unsplash.com/photos/aerial-photography-of-large-body-of-water-and-shoreline-okVXy9tG3KY')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-          <p className="text-blue-900 text-lg md:text-xl font-serif italic">
-            “Healing is not a destination, but a journey. Take your next step today.”
-          </p>
-        </div>
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif text-blue-900">
+    <section id="contact" className="py-16 bg-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
+        
+        <div className="text-center space-y-4 mb-12">
+          <h2 className="text-3xl md:text-5xl font-serif text-blue-900">
             Get in Touch
           </h2>
           <div className="w-16 h-1 bg-blue-400 rounded-full mx-auto"></div>
-          <p className="text-lg text-blue-700 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-blue-700 max-w-2xl mx-auto">
             Simply fill out the brief fields below and Dr. Blake will be in touch with you soon, usually within one business day. This form is safe, private, and completely free.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left Column: Contact Info & Office Hours */}
-          <div className="flex flex-col gap-8">
-            {/* Contact Information */}
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex flex-col gap-8 md:w-1/3 w-full">
+          
             <div className="bg-white border border-blue-100 p-6 rounded-lg shadow-sm">
               <h3 className="font-serif text-lg text-blue-900 mb-4">Contact Information</h3>
               <div className="space-y-2 text-sm text-blue-700">
@@ -142,13 +129,12 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          {/* Contact Form */}
-          <div className="md:col-span-2">
+          <div className="md:w-2/3 w-full">
             <Card className="bg-blue-100 border-2 border-blue-100 shadow-lg rounded-2xl">
-              <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6 text-black">
+              <CardContent className="p-4 sm:p-6 md:p-8">
+                <form onSubmit={handleSubmit} className="space-y-5 text-black">
                   <div>
-                    <label htmlFor="name" className="block text-lg font-medium text-blue-900 mb-2">
+                    <label htmlFor="name" className="block text-base md:text-lg font-medium text-blue-900 mb-2">
                       Name
                     </label>
                     <Input
@@ -163,7 +149,7 @@ const Contact = () => {
                     {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-lg font-medium text-blue-900 mb-2">
+                    <label htmlFor="email" className="block text-base md:text-lg font-medium text-blue-900 mb-2">
                       Email
                     </label>
                     <Input
@@ -179,7 +165,7 @@ const Contact = () => {
                     {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-lg font-medium text-blue-900 mb-2">
+                    <label htmlFor="phone" className="block text-base md:text-lg font-medium text-blue-900 mb-2">
                       Phone
                     </label>
                     <Input
@@ -192,7 +178,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-lg font-medium text-blue-900 mb-2">
+                    <label htmlFor="message" className="block text-base md:text-lg font-medium text-blue-900 mb-2">
                       Message
                     </label>
                     <Textarea
@@ -205,7 +191,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="whatBringsYou" className="block text-lg font-medium text-blue-900 mb-2">
+                    <label htmlFor="whatBringsYou" className="block text-base md:text-lg font-medium text-blue-900 mb-2">
                       What brings you here?
                     </label>
                     <Textarea
@@ -221,7 +207,7 @@ const Contact = () => {
                     {errors.whatBringsYou && <p className="text-red-500 text-sm mt-1">{errors.whatBringsYou}</p>}
                   </div>
                   <div>
-                    <label htmlFor="preferredTime" className="block text-lg font-medium text-blue-900 mb-2">
+                    <label htmlFor="preferredTime" className="block text-base md:text-lg font-medium text-blue-900 mb-2">
                       Preferred Contact Time
                     </label>
                     <Input
@@ -234,7 +220,7 @@ const Contact = () => {
                     <p className="text-sm text-blue-700 mt-1">Let us know when you&#39;re typically available for a call or consultation</p>
                   </div>
                   <div>
-                    <label htmlFor="preferredMethod" className="block text-lg font-medium text-blue-900 mb-2">
+                    <label htmlFor="preferredMethod" className="block text-base md:text-lg font-medium text-blue-900 mb-2">
                       Preferred Contact Method
                     </label>
                     <Select value={formData.preferredMethod} onValueChange={(value) => handleInputChange('preferredMethod', value)}>
